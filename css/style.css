@@ -149,6 +149,10 @@ form div{
     padding: 10px;
 }
 
+#card-name-input{
+   text-transform: capitalise; 
+}
+
 button{
     padding: 10px;
     color: #fff;
