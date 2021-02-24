@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Credit Card Form" />
+    <meta name="keywords" content="credit, card, form" />
+    <meta name="author" content="Luka Goderdzishvili" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Credit Card Form</title>
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <div class="visa-card">
+                <div class="img-box">
+                    <div class="logo-box">
+                        <img src="images/visaIcon.png" alt="VISA" id="visa-logo" />
+                    </div>
+                    <div class="card-number-box">
+                        <pre id="card-number"># # # #   # # # #   # # # #   # # # #</pre>
+                    </div>
+                    <div class="card-data-box">
+                        <div class="data-item">
+                            <p id="card-holder-title">Card Holder</p>
+                            <p id="card-holder-value"></p>
+                        </div>
+                        <div class="data-item">
+                            <p id="expiress-title">Expiress</p>
+                            <p id="expires-value"> <span id="month-value">MM</span>/<span id="year-value">YY</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <form action="#">
+                <div id="number-input-box">
+                    <label for="card-number-input">Card Number</label>
+                    <input type="text" id="card-number-input" name="card-number-input" />
+                    <p id="card-number-invalid" class="dis-none">16 digit card number must start with 4 or 5</p>
+                </div>    
+                <div id="name-input-box">
+                    <label for="card-name-input">Card Name</label>
+                    <input type="text" id="card-name-input" name="card-name-input" />
+                </div>    
+
+                <div class="mini-data">
+                    <div class="mini-data-item">
+                        <label for="month-input">Month</label>
+                        <select name="month-input" id="month-input">
+                            <option value="MM">Month</option>
+                            <option value="01" onclick="changeMonth('01')">01</option>
+                            <option value="02" onclick="changeMonth('02')">02</option>
+                            <option value="03" onclick="changeMonth('03')">03</option>
+                            <option value="04" onclick="changeMonth('04')">04</option>
+                            <option value="05" onclick="changeMonth('05')">05</option>
+                            <option value="06" onclick="changeMonth('06')">06</option>
+                            <option value="07" onclick="changeMonth('07')">07</option>
+                            <option value="08" onclick="changeMonth('08')">08</option>
+                            <option value="09" onclick="changeMonth('09')">09</option>
+                            <option value="10" onclick="changeMonth('10')">10</option>
+                            <option value="11" onclick="changeMonth('11')">11</option>
+                            <option value="12" onclick="changeMonth('12')">12</option>
+                        </select>
+                    </div>
+                    <div class="mini-data-item">
+                        <label for="year-input">Year</label>
+                        <select name="year-input" id="year-input">
+                            <option value="YY">Year</option>
+                            <option value="2021" onclick="changeYear('2021')">2021</option>
+                            <option value="2022" onclick="changeYear('2022')">2022</option>
+                            <option value="2023" onclick="changeYear('2023')">2023</option>
+                            <option value="2024" onclick="changeYear('2024')">2024</option>
+                            <option value="2025" onclick="changeYear('2025')">2025</option>
+                            <option value="2026" onclick="changeYear('2026')">2026</option>
+                        </select>
+                    </div>
+                    <div class="mini-data-item">
+                        <label for="cvv-input">CVV</label>
+                        <input type="number" name="cvv-input" id="cvv-input" />
+                        <p id="card-cvv-invalid" class="dis-none">Enter 3 digit</p>
+                    </div>
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
